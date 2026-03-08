@@ -10,7 +10,7 @@
     "api": "json-server data.json -p 3003"
   },
   "dependencies": {
-    "next": "15.3.1",
+    "next": "^15.5.12",
     "nextjs-toploader": "^3.8.16",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

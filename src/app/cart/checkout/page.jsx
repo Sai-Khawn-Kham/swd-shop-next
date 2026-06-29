@@ -148,9 +148,9 @@ const CheckoutPage = () => {
                         Payment Method
                      </h3>
                      <div className="flex flex-wrap gap-y-2 gap-x-3">
-                        {payments.map((payment, index) => (
-                           <label key={index} htmlFor={payment.id} className="border border-gray-300 flex items-center gap-1 py-1 px-2 rounded-md">
-                              <input type="radio" id={payment.id} name={payment.name} value={payment.id} onChange={() => setPaymentSelect(payment.id)} required />
+                        {payments.map((payment) => (
+                           <label key={payment.id} htmlFor={payment.name} className="border border-gray-300 flex items-center gap-1 py-1 px-2 rounded-md">
+                              <input type="radio" id={payment.name} name="payment" value={payment.name} onChange={() => setPaymentSelect(payment.name)} required />
                               {payment.label}
                            </label>
                         ))}

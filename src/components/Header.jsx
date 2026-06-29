@@ -9,6 +9,7 @@ import HeaderCart from "./HeaderCart";
 import HeaderWishList from "./HeaderWishList";
 import useAccountsStore from "@/store/useAccountsStore";
 import { HiMenu, HiOutlineHeart, HiOutlineShoppingBag } from "react-icons/hi";
+import { LuLogIn } from "react-icons/lu";
 
 const Header = () => {
    const { users } = useAccountsStore();
@@ -48,7 +49,7 @@ const Header = () => {
                   <HeaderCart />
                </Link>
                <Link href={`${users.length==0?'/register':'/account'}`} className="relative inline-block text-gray-600 hover:text-gray-950 active:text-cyan-500">
-                  {users.length==0?(<BsPerson className="size-5" />):(<BsPersonFill className="size-5" />)}
+                  {users.length==0?(<LuLogIn className="size-5" />):(<BsPersonFill className="size-5" />)}
                </Link>
                <div onClick={showMenu} className="relative inline-block md:hidden">
                   <HiMenu className="size-5" />
